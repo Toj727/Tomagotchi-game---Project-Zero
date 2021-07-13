@@ -16,5 +16,65 @@ console.log("Don't Kill The Cat");
 
 // All variables increase as time increment increases between corresponding button clicks. Except age increases continually unless game ends.
 
-// Game ends when any variable reaches 10.
+// Game over when any variable reaches 10.
+// User wins when age reaches 10
 
+
+
+class Cat {
+    constructor(name) {
+        this.name = name;
+        this.age = 1;
+        this.hungerScore = 5;
+        this.bordomScore = 5;
+        this.sleepScore = 5;
+    }
+    ageIncrease() {
+        setInterval(() => {
+            this.age ++;
+        }, 60000);
+    }
+    
+    hungerIncrease() {
+        setInterval(() => {
+            this.hungerScore ++;
+        }, 10000);
+    }
+
+    sleepinessIncrease() {
+        setInterval(() => {
+            this.sleepScore ++;
+        }, 10000);
+    }
+
+    boredomIncrease() {
+        setInterval(() => {
+            this.bordomScore --;
+        }, 10000);
+    }
+
+    feed() {
+        this.hungerScore --;
+    }
+
+    toggleLight() {
+        this.sleepScore --; 
+    }
+
+    pet() {
+        this.bordomScore --;
+    }
+
+    didCatDie() {
+        if (this.hungerScore === 10 || this.sleepScore == 10 || this.bordomScore === 10) {
+            return true;
+        }
+        else return false;
+    }
+
+}
+
+$(function() {
+
+    console.log("Game Starts!");
+});
