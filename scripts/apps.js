@@ -75,6 +75,9 @@ class Cat {
 }
 
 $(function() {
-
-    console.log("Game Starts!");
+    $("#name").click(function() {
+        return false; // prevents game from starting without field being filled out, hopefully
+    });
+        
+        
 });

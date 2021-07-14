@@ -16,29 +16,45 @@ body {
     align-items: center;
     color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     min-height: 100 vh;
 
 }
 
 .title {
+    padding: 50px 0 50px 0;
+}
+
+
+
+.container {
+    /* background-color: rgb(51, 143, 143); */
+     /* background-image: url(https://www.nicepng.com/png/detail/95-954008_easy-go-cats-pixel.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position-x: right; */
+    border: none;
+    border-radius: 10px;
+    position: center;
+    margin: 100px;
     padding: 50px;
-}
-
-
-/* .container {
-    background-color: rgb(51, 143, 143);
-    width: 100%;
-    height: 500px;
     overflow: hidden;
+    text-align: left;
 }
+/* #cat_label {
+    text-align: center;
+} */
 
-.box_img {
+#newCat {
+    margin-left: 10px;
+}
+/* .box_img {
     height: 500px;
     object-fit: cover;
     object-position: center;
     width: 100%;
-} */
+} */ 
 
 
 #title {
