@@ -28,6 +28,13 @@ class Cat {
         this.hungerScore = 5;
         this.bordomScore = 5;
         this.sleepScore = 5;
+        this.timer = 0;
+    }
+
+    timerIncrease() {
+        setInterval(() => {
+            this.timer ++;
+        }, 1000)
     }
     ageIncrease() {
         setInterval(() => {
@@ -83,7 +90,15 @@ $(function() {
 
     let catName = Cat(name);
 
-        $("#hungerScore").text(Cat.hungerScore);
-        $("#sleepScore").text(Cat.)
-        
+
+        $("#hungerScore").text(catName.hungerScore);
+        $("#sleepScore").text(catName.sleepScore);
+        $("#boredomScore").text(catName.bordomScore);
+        $("age").text(catName.age);
+        catName.boredomIncrease();
+        catName.hungerIncrease();
+        catName.sleepinessIncrease();
+        catName.ageIncrease();
+
+        $(".displayName").text(catName.name);
 });
