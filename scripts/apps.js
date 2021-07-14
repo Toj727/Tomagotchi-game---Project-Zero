@@ -78,6 +78,12 @@ $(function() {
     $("#name").click(function() {
         return false; // prevents game from starting without field being filled out, hopefully
     });
-        
+    
+    const name = $("#name_your_cat").value();
+
+    let catName = Cat(name);
+
+        $("#hungerScore").text(Cat.hungerScore);
+        $("#sleepScore").text(Cat.)
         
 });

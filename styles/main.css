@@ -43,16 +43,35 @@ body {
     text-align: left;
 }
 
+#name_box {
+    /* display: none; */
+}
 
-
-#scores {
+.values {
     display: none;
 }
+
+#scores {
+    font-weight: bold;
+}
+
+.displayName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 #age1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 5px;
     width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
 /* .box_img {
     height: 500px;
