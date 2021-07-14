@@ -29,7 +29,7 @@ body {
 
 
 .container {
-    /* background-color: rgb(51, 143, 143); */
+    background-color: rgba(255, 255, 255, 0.564);
      /* background-image: url(https://www.nicepng.com/png/detail/95-954008_easy-go-cats-pixel.png);
     background-repeat: no-repeat;
     background-size: 50px 50px;
@@ -42,12 +42,17 @@ body {
     overflow: hidden;
     text-align: left;
 }
-/* #cat_label {
-    text-align: center;
-} */
 
-#newCat {
-    margin-left: 10px;
+
+
+#scores {
+    display: none;
+}
+#age1 {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
 }
 /* .box_img {
     height: 500px;
