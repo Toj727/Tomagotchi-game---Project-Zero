@@ -44,19 +44,26 @@ body {
 }
 
 #name_box {
+    /* display: block; */
+}
+
+#values {
     display: none;
 }
 
-.values {
-    /* display: none; */
+#death {
+    display: none;
 }
 
+#newCat {
+    margin-left: 5px;
+}
 #scores {
     font-weight: bold;
 }
 
 #yourCat {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
 }
