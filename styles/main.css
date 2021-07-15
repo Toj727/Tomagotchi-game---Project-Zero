@@ -43,9 +43,6 @@ body {
     text-align: left;
 }
 
-#name_box {
-    /* display: block; */
-}
 
 #values {
     display: none;
@@ -62,11 +59,11 @@ body {
     font-weight: bold;
 }
 
-#yourCat {
+/* #yourCat {
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
-}
+} */
 
 #age1 {
     border: 1px solid #ddd;

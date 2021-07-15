@@ -23,57 +23,47 @@
             
         <hr>
         
-            <p>Win the game by having your cat reach age 10!</p>
+            <!-- <p>Win the game by having your cat reach age 10!</p> -->
 
     </div>
 
     <main class="container">
-            
-        <div id="name_box">
-                
-            <form id="name">
                     
-                <div class="form_div">
-                        
-                    <label for="name_your_cat" id="cat_label">Name Your Cat!</label>
+                <div class="gameBegins">
+                    
+                    <h2>Name Your Cat!</h2>
                     <br>
-                    <br>
-                    <input type="text" name="name_your_cat" id="name_your_cat" class="form-control"><span><button type="submit" name="button" class="form-control" id="newCat">Start Game</button></span>
-                    </div>
-                </form>
-
-            </div>
-                  
-    
+                    <input type="text" name="name" id="name"><span><button id="newCat">Start Game</button></span>
+                </div>
 
         <div id="values">
 
             <img id="age1" src="https://res.cloudinary.com/teepublic/image/private/s--RVlQ7a7v--/c_fit,g_north_west,h_828,w_920/co_ffffff,e_outline:41/co_ffffff,e_outline:inner_fill:1/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1577035356/production/designs/7308616_0.jpg" alt="yourCat">
             
-            <h1 class="displayName" id="yourCat">Name</h1>
+            <h2 class="displayName"></h2>
 
             <hr>
             
             <br>
             
             <div class="numbers">
-            <h3>Don't let<span class="displayName"></span> die! Feed it, pet it, and put it to sleep to keep it's scores above 0!</h3>
+            <h3>Don't let <span class="displayName"></span> die! Feed it, pet it, and put it to sleep to keep it's Hunger, Boredom, and Sleepiness below 10!</h3>
 
                 <br>
 
-                <p class="scores">Age:<span id="age"></span></p>
+                <p class="scores">Age: <span id="age"></span></p>
                 
                 <br>
 
-                <p class="scores">Hunger:<span id="hungerScore"></span></p>
+                <p class="scores">Hunger: <span id="hungerScore"></span></p>
 
                 <br>
 
-                <p class="scores">Boredom:<span id="boredomScore"></span></p>
+                <p class="scores">Boredom: <span id="boredomScore"></span></p>
 
                 <br>
         
-                <p class="scores">Sleepiness:<span id="sleepScore"></span></p>
+                <p class="scores">Sleepiness: <span id="sleepScore"></span></p>
             </div>
         
         <br>
@@ -84,8 +74,8 @@
 
     <div id="death">
         <h1>You Killed the Cat!</h1>
-        <br>
-        <button id="reset" name="button" type="button" class="reset_button">Play Again?</button>
+        <!-- <br>
+        <button id="reset">Play Again?</button> -->
     </div>
     </main>
 </body>

@@ -28,18 +28,13 @@ class Cat {
         this.hungerScore = 5;
         this.bordomScore = 5;
         this.sleepScore = 5;
-        // this.timer = 0;
     }
 
-    // timerIncrease() {
-    //     setInterval(() => {
-    //         this.timer ++;
-    //     }, 1000)
-    // }
+  
     ageIncrease() {
         setInterval(() => {
             this.ageScore ++;
-        }, 1000);
+        }, 60000);
     }
     
     hungerIncrease() {
@@ -56,13 +51,10 @@ class Cat {
 
     boredomIncrease() {
         setInterval(() => {
-            this.bordomScore --;
+            this.bordomScore ++;
         }, 10000);
     }
     
-    age() {
-        this.ageScore ++;
-    }
     feed() {
         this.hungerScore --;
     }
@@ -79,27 +71,16 @@ class Cat {
         if (this.hungerScore === 10 || this.sleepScore == 10 || this.bordomScore === 10) {
             return true;
         }
-        else if (this.ageScore === 10) {
-            
-        }
-        return false;
+        else return false;
     }
+
+
 
 }
 
-// timer: null,
-// startTimer() {
-//     this.timer = setInterval(this.increaseTime, 1000);
-// };
-// increaseTime() {
-//     Cat.time ++;
-//     $("#timer").text(`timer: ${Cat.time}s`);
-//     if (Cat.time >= 10000) {
-        
-//     }
-// }
 
-$(function() {
+
+$(document).ready(function() {
     $("#name").submit(function(event) {
         event.preventDefault() // prevents game from starting without field being filled out, hopefully
     });
@@ -107,23 +88,26 @@ $(function() {
     $("#values").show();
     $("#name_box").hide();
     
-    let name = $("#name_your_cat").val();
+    let name = $("#name").val();
+    $(".displayName").text(name);
 
     let catName = new Cat(name);
 
         // Callback to score variables, 
+        
         $("#hungerScore").text(catName.hungerScore);
         $("#sleepScore").text(catName.sleepScore);
         $("#boredomScore").text(catName.bordomScore);
-        $("age").text(catName.age);
+        $("age").text(catName.ageScore);
         catName.boredomIncrease();
         catName.hungerIncrease();
         catName.sleepinessIncrease();
         catName.ageIncrease();
 
-        $(".displayName").text(catName.name);
+        // $(".displayName").text(catName.name);
 
         let scoreInterval = setInterval(function() {
+            $("#age").text(catName.ageScore);
             $("#hungerScore").text(catName.hungerScore);
             $("#sleepScore").text(catName.sleepScore);
             $("#boredomScore").text(catName.bordomScore);
@@ -134,7 +118,9 @@ $(function() {
                 $("#values").hide();
                 clearInterval(scoreInterval);
             }
-        }, 2000);
+        }, 1000);
+
+        // $("#newCat").on("click", catName.start())
 
         $("#feed").click(function() {
             catName.feed();
@@ -149,9 +135,18 @@ $(function() {
         })
 
         $("#reset").click(function() {
+            // catName.resetGame();
             $("death").hide();
             $("#values").show();
-        });
+        })
+
+    })
+const startGame = function() {
+    console.log("clicked");
+    $(".gameBegins").hide();
 
 
-});
+}
+
+$("#newCat").on("click", startGame);
+
