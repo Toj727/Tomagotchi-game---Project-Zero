@@ -84,18 +84,10 @@ class Cat {
 $(document).ready(function() {
     let name;
     let catName;
-    // $("#newCat").submit(
-    // // (function(event) {
-    //     // event.preventDefault() // prevents game from starting without field being filled out, hopefully
-    //     name = $("#name").attr("value");
-    // );
-    // $("#newCat").click(function() {
-    //     name = $("#name").attr("value")
-    // })
-    // console.log(name)
+ 
     $("#values").show();
     
-    // let name = $("#name").val();
+  
     const startGame = function() {
         console.log($("#name").attr("value"), $("#name").val())
         console.log("clicked");
@@ -114,7 +106,7 @@ $(document).ready(function() {
         catName.hungerIncrease();
         catName.sleepinessIncrease();
         catName.ageIncrease();
-        // scoreInterval();
+   
     }
     let scoreInterval = setInterval(function() {
         $("#age").text(catName.ageScore);
