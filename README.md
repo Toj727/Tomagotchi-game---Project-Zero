@@ -17,7 +17,7 @@ Some unsolved problems I have in my game are:
 
     There is also no way to reset the game without refreshing the games.
 
-User Story
+<strong>User Story</strong>
 
     1. The user starts the game by entering in a name in the start game input field.
 
@@ -35,5 +35,5 @@ User Story
 
     5. If the user does not keep the scores under 10, the cat will die and a screen will appear and say "Your Cat Has Died."
 
-    
+
 
