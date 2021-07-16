@@ -130,11 +130,6 @@ $(document).ready(function() {
    
     console.log(catName)
     
-        // $(".displayName").text(catName.name);
-
-        
-
-        // $("#newCat").on("click", catName.start())
 
         $("#feed").click(function() {
             catName.feed();
@@ -149,17 +144,11 @@ $(document).ready(function() {
         })
 
         $("#reset").click(function() {
-            // catName.resetGame();
+
             $("death").hide();
             $("#values").show();
         })
-        // const startGame = function() {
-        //     console.log("clicked");
-        //     name = $("#name").attr("value")
-        //     $(".gameBegins").hide();
-        // console.log(name)
-        
-        // }
+       
         
         $("#newCat").on("click", startGame);
         
