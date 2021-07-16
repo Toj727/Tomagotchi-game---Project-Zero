@@ -19,7 +19,8 @@ console.log("Don't Kill The Cat");
 // Game over when any variable reaches 10.
 // User wins when age reaches 10
 
-
+let age3Pic = "https://placekitten.com/200/287";
+let age6Pic = "https://www.vhv.rs/dpng/d/525-5252943_not-my-art-pusheen-nyan-cat-x3-pixel.png";
 
 class Cat {
     constructor(name) {
@@ -81,18 +82,28 @@ class Cat {
 
 
 $(document).ready(function() {
-    $("#name").submit(function(event) {
-        event.preventDefault() // prevents game from starting without field being filled out, hopefully
-    });
-
+    let name;
+    let catName;
+    // $("#newCat").submit(
+    // // (function(event) {
+    //     // event.preventDefault() // prevents game from starting without field being filled out, hopefully
+    //     name = $("#name").attr("value");
+    // );
+    // $("#newCat").click(function() {
+    //     name = $("#name").attr("value")
+    // })
+    // console.log(name)
     $("#values").show();
-    $("#name_box").hide();
     
-    let name = $("#name").val();
-    $(".displayName").text(name);
-
-    let catName = new Cat(name);
-
+    // let name = $("#name").val();
+    const startGame = function() {
+        console.log($("#name").attr("value"), $("#name").val())
+        console.log("clicked");
+        name = $("#name").val();
+        $(".gameBegins").hide();
+    console.log(name)
+    catName = new Cat(name);
+    $(".displayName").text(catName.name);
         // Callback to score variables, 
         
         $("#hungerScore").text(catName.hungerScore);
@@ -103,22 +114,33 @@ $(document).ready(function() {
         catName.hungerIncrease();
         catName.sleepinessIncrease();
         catName.ageIncrease();
+        // scoreInterval();
+    }
+    let scoreInterval = setInterval(function() {
+        $("#age").text(catName.ageScore);
+        $("#hungerScore").text(catName.hungerScore);
+        $("#sleepScore").text(catName.sleepScore);
+        $("#boredomScore").text(catName.bordomScore);
+        if (catName.ageScore === 3) {
+            $("#age1").attr("src", age3Pic)
+        }
+        if (catName.ageScore === 6) {
+            $("#age1").attr("src", age6Pic)
+        }
+        if (catName.didCatDie()) {
+            
+            $("#death").show();
+            $("#values").hide();
+            clearInterval(scoreInterval);
+        }
+    }, 1000);
 
+   
+    console.log(catName)
+    
         // $(".displayName").text(catName.name);
 
-        let scoreInterval = setInterval(function() {
-            $("#age").text(catName.ageScore);
-            $("#hungerScore").text(catName.hungerScore);
-            $("#sleepScore").text(catName.sleepScore);
-            $("#boredomScore").text(catName.bordomScore);
-
-            if (catName.didCatDie()) {
-                
-                $("#death").show();
-                $("#values").hide();
-                clearInterval(scoreInterval);
-            }
-        }, 1000);
+        
 
         // $("#newCat").on("click", catName.start())
 
@@ -139,14 +161,15 @@ $(document).ready(function() {
             $("death").hide();
             $("#values").show();
         })
-
+        // const startGame = function() {
+        //     console.log("clicked");
+        //     name = $("#name").attr("value")
+        //     $(".gameBegins").hide();
+        // console.log(name)
+        
+        // }
+        
+        $("#newCat").on("click", startGame);
+        
     })
-const startGame = function() {
-    console.log("clicked");
-    $(".gameBegins").hide();
-
-
-}
-
-$("#newCat").on("click", startGame);
 
