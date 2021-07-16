@@ -10,14 +10,13 @@ console.log("Don't Kill The Cat");
 // Feed decreases hunger variable
 // Pet decreases Boredom variable
 // light toggle decreases sleepiness variable
-// All variables (except age) start at 5 and increase every 30s
+// All variables (except age) start at 5 and increase every 10s
 // Age starts at 1 and increases every minute by 1.
-// At Ages 3, 6, and 9, cat grows bigger 
+// At Ages 3 and 6 cat grows bigger 
 
 // All variables increase as time increment increases between corresponding button clicks. Except age increases continually unless game ends.
 
-// Game over when any variable reaches 10.
-// User wins when age reaches 10
+// Game over when any variable (besides age) reaches 10.
 
 let age3Pic = "https://placekitten.com/200/287";
 let age6Pic = "https://www.vhv.rs/dpng/d/525-5252943_not-my-art-pusheen-nyan-cat-x3-pixel.png";
@@ -36,7 +35,7 @@ class Cat {
     ageIncrease() {
         setInterval(() => {
             this.ageScore ++;
-        }, 30000);
+        }, 10000);
     }
     
     hungerIncrease() {
