@@ -30,10 +30,6 @@ body {
 
 .container {
     background-color: rgba(255, 255, 255, 0.564);
-     /* background-image: url(https://www.nicepng.com/png/detail/95-954008_easy-go-cats-pixel.png);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    background-position-x: right; */
     border: none;
     border-radius: 10px;
     position: center;
@@ -59,11 +55,6 @@ body {
     font-weight: bold;
 }
 
-/* #yourCat {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-} */
 
 #age1 {
     border: 1px solid #ddd;
@@ -88,14 +79,6 @@ body {
 }
 
 
-/* .box_img {
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-} */ 
-
-
 #title {
     color: #000;
     text-align: center;
@@ -103,20 +86,3 @@ body {
 
 
 
-/* #bg {
-    position: fixed; 
-    top: -50%; 
-    left: -50%; 
-    width: 200%; 
-    height: 200%;
-  }
-  #bg img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
-    min-width: 50%;
-    min-height: 50%;
-  } */
