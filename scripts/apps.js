@@ -35,7 +35,7 @@ class Cat {
     ageIncrease() {
         setInterval(() => {
             this.ageScore ++;
-        }, 10000);
+        }, 5000);
     }
     
     hungerIncrease() {
